@@ -1,0 +1,2 @@
+head -1 "$1" | grep -Eq '^(feat|fix|style|refactor|chore|docs|test)\([a-z0-9-]+\)!?: .{1,72}$|^Revert ' || {
+  echo "Commit must be 'type(scope): summary' (feat|fix|style|refactor|chore|docs|test)"; exit 1; }
